@@ -561,18 +561,18 @@ let students = [
 
 // 1. Print all students
 function printAllStudents() {
-    console.log("All Students:");
+    console.log("All Students List:")
     for (let student of students) {
-        let { name, department, mark } = student;
-        console.log(name, department, mark);
+        let { name, department, mark } = student
+        console.log(name, department, mark)
     }
 }
 
 // 2. Print only ECE students
 function printECEStudents() {
-    console.log("ECE Students:");
+    console.log("Students who studied in ECE");
     for (let student of students) {
-        let { name, department, mark } = student;
+        let { name, department, mark } = student
         if (department === "ECE") {
             console.log(name, department, mark);
         }
@@ -581,9 +581,9 @@ function printECEStudents() {
 
 // 3. Find students who scored above 80
 function studentsAbove80() {
-    console.log("Students who scored above 80:");
+    console.log("Students who scored above 80 percent is:");
     for (let student of students) {
-        let { name, mark } = student;
+        let { name, mark } = student
         if (mark > 80) {
             console.log(name, mark);
         }
@@ -592,48 +592,49 @@ function studentsAbove80() {
 
 // 4. Calculate total marks
 function calculateTotal() {
-    let total = 0;
+    let total1 = 0
     for (let student of students) {
-        let { mark } = student;
-        total = total + mark;
+        let { mark } = student
+        total1 += mark
     }
-    return total;
+    return total1
 }
 
 // 5. Calculate average
 function calculateAverage() {
-    let total = calculateTotal();
-    return total / students.length;
+    let total2 = calculateTotal();
+    let avg = total / students.length
+    return avg
 }
 
 // 6. Display highest mark
 function findHighest() {
-    let highest = students[0].mark;
+    let highest = students[0].mark
     for (let student of students) {
-        let { mark } = student;
+        let { mark } = student
         if (mark > highest) {
-            highest = mark;
+            highest = mark
         }
     }
-    return highest;
+    return highest
 }
 
 // 7. Display lowest mark
 function findLowest() {
-    let lowest = students[0].mark;
+    let lowest = students[0].mark
     for (let student of students) {
-        let { mark } = student;
+        let { mark } = student
         if (mark < lowest) {
-            lowest = mark;
+            lowest = mark
         }
     }
-    return lowest;
+    return lowest
 }
 printAllStudents();
 printECEStudents();
 studentsAbove80();
-console.log("Total Marks:", calculateTotal());
-console.log("Average:", calculateAverage());
-console.log("Highest Mark:", findHighest());
-console.log("Lowest Mark:", findLowest());
+console.log("Total Marks of the students :", calculateTotal());
+console.log("Average Marks of the students :", calculateAverage());
+console.log("Highest Mark :", findHighest());
+console.log("Lowest Mark :", findLowest());
 
