@@ -132,7 +132,7 @@ Rules:
 2.	If correct, check password
 3.	If correct, check OTP
 4.	Print "Login successful" only when all three are correct.  */
-/*
+
 console.log("Task 6");
 let username = "admin";
 let password = "1234";
@@ -217,7 +217,7 @@ OTP verified
 Otherwise after 3 attempts:
 Account blocked
 This builds directly on your OTP loop example.   */
-/*
+
 console.log("Task 10");
 let correctOTP = 1234;
 let attempt = 1
