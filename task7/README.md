@@ -2,4 +2,4 @@
 
 ## Live Website
 
-[🌐 Live Website](https://varshinirdha.github.io/JavaScript/task7/)
+[🌐 Live Website](https://varshinirdha.github.io/JavaScript/task7/index.html)
