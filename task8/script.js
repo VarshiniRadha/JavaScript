@@ -240,6 +240,7 @@ fetch(apiLink).then((data)=>{
             c.title.toLowerCase().includes(value)
         )
         resultCard.innerHTML = ""
+        displayProducts(result)
 
         result.forEach((c,i,t) => {
             let Api = document.createElement("div")
@@ -314,6 +315,7 @@ fetch(apiLink).then((data)=>{
             resultCard.append(Api) 
         }) 
     } 
+    displayProducts(jsData)
     low.addEventListener("click", ()=>{ 
         let result = [...jsData].sort((a,b)=>a.price - b.price) 
         displayProducts(result) 
