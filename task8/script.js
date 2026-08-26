@@ -236,7 +236,7 @@ fetch(apiLink).then((data)=>{
     apiCard.append(resultCard)
     searchBtn.addEventListener("click", () => {
         let value = search.value.toLowerCase()
-        let result = jsData.filter((c) =>
+        let result = jsData.filter((c,i,t) =>
             c.title.toLowerCase().includes(value)
         )
         resultCard.innerHTML = ""
@@ -370,7 +370,7 @@ fetch(apiLink).then((data)=>{
                 displayProducts(jsData)
             }
             else{
-                let result = jsData.filter((c)=>{
+                let result = jsData.filter((c,i,t)=>{
                     return c.category == category
                 })
                 displayProducts(result)
@@ -459,7 +459,7 @@ fetch(apiLink).then((data)=>{
                 displayProducts(jsData)
             }
             else{
-                let result = jsData.filter((c)=>{
+                let result = jsData.filter((c,i,t)=>{
                     return c.category == category
                 })
                 displayProducts(result)
@@ -524,103 +524,5 @@ fetch(apiLink).then((data)=>{
         displayProducts(result) 
     }) 
 })
-    /*
-    let low = document.createElement("button")
-    low.innerText = "Low → High"
-
-    let high = document.createElement("button")
-    high.innerText = "High → Low"
-
-    apiCard.append(low)
-    apiCard.append(high)
-
-
-    /* Total Products 
-    let total = document.createElement("h3")
-    total.innerText = `Total Products: ${jsData.length}`
-    total.style.cssText = "width:100%; text-align:center;"
-    apiCard.append(total)
-
-
-    /* Result Card 
-    let resultCard = document.createElement("div")
-    resultCard.className = "resultCard"
-
-    resultCard.style.cssText = `
-        width:100%;
-        display:flex;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:30px;
-    `
-
-    apiCard.append(resultCard)
-
-
-    /* Display Products 
-    function displayProducts(data){
-
-        resultCard.innerHTML = ""
-
-        data.forEach((c,i,t)=>{
-
-            let Api = document.createElement("div")
-
-            Api.innerHTML = `
-                <img src="${c.image}" />
-
-                <h2>${c.title.slice(0,25)}..</h2>
-
-                <h3>${c.category}</h3>
-
-                <p>${c.description.slice(0,50)}...</p>
-
-                <button>$ ${c.price}</button>
-
-                <button>Add to Cart</button>
-            `
-
-            resultCard.append(Api)
-        })
-    }*/
-
-
-    /* Search 
-    searchBtn.addEventListener("click", ()=>{
-
-        let value = search.value.toLowerCase()
-
-        let result = jsData.filter((c)=>{
-            return c.title.toLowerCase().includes(value)
-        })
-
-        displayProducts(result)
-    })
-
-
-    /* Low → High 
-    low.addEventListener("click", ()=>{
-
-        let result = [...jsData].sort((a,b)=>{
-            return a.price - b.price
-        })
-
-        displayProducts(result)
-    })
-
-
-    /* High → Low 
-    high.addEventListener("click", ()=>{
-
-        let result = [...jsData].sort((a,b)=>{
-            return b.price - a.price
-        })
-
-        displayProducts(result)
-    })
-
-
-    /* Display all products initially 
-    displayProducts(jsData)*/
-
+   
 
