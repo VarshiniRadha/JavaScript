@@ -1,0 +1,130 @@
+#btn {
+    transition: .3s;
+    display: inline-block;
+}
+#btn:hover{
+    background-color: rgb(0, 0, 112);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: scale(1.2);
+}
+#btn1 {
+    transition: .3s;
+    display: inline-block;
+}
+#btn1:hover{
+    background-color: rgb(47, 47, 48);
+    color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+h2 {
+    animation: slideDown 0.8s ease;
+}
+
+h3 {
+    animation: slideDown 1s ease;
+}
+
+#btn {
+    display: inline-block;
+    transition: 0.3s;
+    animation: buttonAppear 1.2s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+#active {
+    padding: 8px 12px;
+    margin: 10px;
+    font-size: 18px;
+    animation: left 0.5s linear;
+    border-radius: 6px;
+}
+
+#complete {
+    margin-left: 8px;
+    padding: 5px 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+#complete:hover {
+    background-color: lightgreen;
+    transform: scale(1.05);
+}
+
+#completed {
+    background-color: lightgreen;
+    color: green;
+    border-color: green;
+}
+
+#edit {
+    margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+#edit:hover {
+    background-color: rgb(86, 198, 236);
+    color: white;
+    transform: scale(1.05);
+}
+
+#delete {
+    margin-left: 10px;
+    padding: 6px 14px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #888;
+    border-radius: 5px;
+    background-color: white;
+    transition: 0.2s;
+}
+
+#delete:hover {
+    background-color: rgb(248, 67, 67);
+    color: white;
+    transform: scale(1.05);
+}
+
+#complete:active,
+#edit:active,
+#delete:active {
+    transform: scale(0.9);
+}
