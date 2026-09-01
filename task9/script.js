@@ -13,7 +13,7 @@ Concepts they must use
 10.	addEventListener()
 */
 /* 🔴 Final Task — Mini Fake Store Website */
-
+let apiLink = "https://fakestoreapi.com/products"
 fetch(apiLink).then((data)=>{
     return data.json()
 })
